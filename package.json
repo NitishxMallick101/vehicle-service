@@ -1,0 +1,59 @@
+{
+  "name": "vehicle-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vehicle makes and types API backed by PostgreSQL",
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "ingest": "node dist/ingest.js",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "migration:run": "node dist/migrate.js",
+    "migration:generate": "typeorm migration:generate -d dist/database/data-source.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "@as-integrations/express5": "^1.1.2",
+    "@nestjs/apollo": "^13.4.5",
+    "@nestjs/common": "^11.2.8",
+    "@nestjs/config": "^4.0.4",
+    "@nestjs/core": "^11.2.8",
+    "@nestjs/graphql": "^13.4.5",
+    "@nestjs/platform-express": "^11.2.8",
+    "@nestjs/swagger": "^11.4.7",
+    "@nestjs/typeorm": "^11.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "dotenv": "^16.4.7",
+    "fast-xml-parser": "^5.11.2",
+    "graphql": "^16.11.0",
+    "joi": "^17.13.3",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.28"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.24",
+    "@nestjs/schematics": "^11.1.0",
+    "@nestjs/testing": "^11.2.8",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.10",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "overrides": {
+    "@graphql-tools/utils": "^12.1.0",
+    "multer": "^2.5.0",
+    "@nestjs/swagger": {
+      "js-yaml": "^5.4.3"
+    }
+  }
+}

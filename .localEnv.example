@@ -1,0 +1,13 @@
+NODE_ENV=development
+PORT=3000
+LOG_LEVEL=log
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/vehicle_service
+DATABASE_SSL=false
+DATABASE_POOL_SIZE=10
+POSTGRES_DB=vehicle_service
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+VPIC_BASE_URL=https://vpic.nhtsa.dot.gov/api/vehicles
+VPIC_TIMEOUT_MS=20000
+VPIC_RETRIES=2
+VPIC_CONCURRENCY=8
